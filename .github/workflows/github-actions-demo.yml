@@ -7,6 +7,11 @@ jobs:
     steps:
       - name: 23f3002157@ds.study.iitm.ac.in
         run: echo "Hello, world!"
+      - name: Cache dependencies
+        id: cache
+        uses: actions/cache@v4
+      - name: prime-cache-91cd5c7
+        run: echo "Cache hit:"
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."

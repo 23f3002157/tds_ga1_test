@@ -10,6 +10,11 @@ jobs:
       - name: Cache dependencies
         id: cache
         uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: cache-91cd5c7
+          restore-keys: |
+            cache-
       - name: prime-cache-91cd5c7
         run: echo "Cache hit:"
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
